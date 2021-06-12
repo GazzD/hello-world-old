@@ -2,7 +2,7 @@ package com.ironhack.main;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Goodbye World :C");
+        System.out.println("Welcome to this app");
 
     }
 }
