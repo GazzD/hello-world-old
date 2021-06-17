@@ -1,18 +1,50 @@
 package com.ironhack.main;
 
-import com.ironhack.classes.Calculator;
-import com.ironhack.classes.SuperUser;
-import com.ironhack.classes.User;
+import com.ironhack.classes.*;
+import com.ironhack.interfaces.Playable;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         System.out.println("Hello world :D");
-        oopClass();
+//        AndroidPlayer androidPlayer = new AndroidPlayer(10);
+//        ApplePlayer applePlayer = new ApplePlayer(0.1);
+//
+//        androidPlayer.play();
+//        applePlayer.play();
+//        androidPlayer.increaseVolume(20);
+//        applePlayer.increaseVolume(0.5);
+        Playable playable = new ApplePlayer(0.1);
+        playable.increaseVolume(10);
+
+        Shape triangle = new Triangle(10, 20);
+        System.out.println(triangle.calculateArea());
+
+        double taskRevenue = 0.7;
+        double serviceFee = 0.1;
+
+        System.out.println(taskRevenue + serviceFee);
+
+//        BigDecimal bigDecimalTaskRevenue = new BigDecimal("10");
+//        BigDecimal bigDecimalServiceFee = new BigDecimal("3");
+//        BigDecimal result = bigDecimalTaskRevenue.divide(bigDecimalServiceFee, 2, RoundingMode.HALF_EVEN);
+
+        BigDecimal bigDecimalTaskRevenue = new BigDecimal("0.7");
+        BigDecimal bigDecimalServiceFee = new BigDecimal("0.1");
+        BigDecimal result = bigDecimalTaskRevenue.add(bigDecimalServiceFee).setScale(2, RoundingMode.HALF_EVEN);
+
+        System.out.println(result);
+
+
 
     }
 
